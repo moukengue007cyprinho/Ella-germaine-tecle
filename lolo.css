@@ -1,54 +1,91 @@
+
+
 body{
     margin: 0;
-    /* Annuler les marges(les espaces) */
+    padding: 0;
+    box-sizing: border-box;
+    /* les 3 premiers annulent les marges */
+    font-family: Arial, Helvetica, sans-serif;
+    /* changer la forme de l'écriture */
+    background-color: #f8f8f8;
+    /* couleur de l'arrière plan */
+    color: #333;
+    /* couleur du texte */
 }
+
+/* HEADER */
+
 header{
     display: flex;
     justify-content: space-between;
-    /* nous permet de créer l'espace automatiquement entre les élèments.
-    Notre cas,c'est entre la div qui contient le logo et la nav  */
     align-items: center;
     background-color: #444b30;
     color: white;
-    
-    /* centrer les élèments de façon verticale */
-
+    padding: 20px 60px;
 }
+
 
 nav ul{
     list-style: none;
-    /* nous permet de retirer les points sur la liste*/
     display: flex;
-    gap: 15px;
-
-    /*nous permet de maitriser l'espace qui sépare les élèments. */
-
-    padding: 0 15px;
-
-    /*créer l'espace intrieur à gauche et à droite */
-
-    
+    gap: 25px;
 }
 
 nav ul li a{
-    text-decoration: none ;
-    /* Anuler le surlignage */
-    color: blanchedalmond;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
 }
+
+nav ul li a:hover{
+    color: #d9c9a5;
+}
+
+/* HERO */
 
 .home{
+    height: 85vh;
     background-image: url("Banniere.png");
-    height: 80vh;
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
-    margin-top: -15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.home p{
+.hero-content{
+    /* une autre façon de represneter: rgba: r, c'est le rouge, 
+    le g c'est le vert , b c'est le bleu , le a c'est alpha (opacité)*/
+    background-color: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 10px;
+    /* arrondir les bordures */
     text-align: center;
-    font-size: 20px;
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    /* taille maximale */
 }
 
+.hero-content h1{
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #444b30;
+}
+
+.hero-content p{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    /* espace entre les lignes... */
+}
+
+/* BOUTONS */
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #444b30;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    
+}
